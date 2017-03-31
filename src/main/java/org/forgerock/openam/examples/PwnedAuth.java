@@ -326,6 +326,7 @@ public class PwnedAuth extends AMLoginModule {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Accept", "application/json");
+            conn.setRequestProperty("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.33 Safari/537.36");
             if (conn.getResponseCode() == 404) {
                 debug.message("PwnedAuth.haveIBeenPwned() : response 404 - no breaches found");
                 return json;

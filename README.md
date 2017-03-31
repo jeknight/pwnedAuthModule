@@ -16,7 +16,7 @@ Copy the build jar into the OpenAM WEB-INF/lib directory.
 Register the module with OpenAM: 
 
 - ssoadm create-svc --adminid amadmin --password-file passwd.txt --xmlfile src/main/resources/amAuthPwnedAuth.xml
-- ssoadm register-auth-module --adminid amadmin --password-file passwd.txt --authmodule
+- ssoadm register-auth-module --adminid amadmin --password-file passwd.txt --authmodule org.forgerock.openam.examples.PwnedAuth
 
 Restart the OpenAM container.
 
